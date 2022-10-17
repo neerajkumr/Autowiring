@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="univ" class="com.spring.University" >
+<constructor-arg value="ANNA UNIV" type="String"/>
+<constructor-arg ref="clg1"></constructor-arg>
+</bean>
+
+<bean id="clg1" class="com.spring.Collage">
+<constructor-arg value="park tech" type="String"/>
+<constructor-arg value="coimbatore"/>
+<constructor-arg ref="addr1"/>
+</bean>
+<bean id="clg2" class="com.spring.Collage">
+<constructor-arg value="vit" type="String"/>
+<constructor-arg value="vellore" type="String"/>
+<constructor-arg ref="addr2"></constructor-arg>
+</bean>
+<bean id="clg3" class="com.spring.Collage">
+<constructor-arg value="PMC TECH"/>
+<constructor-arg value="krishnagiri"/>
+<constructor-arg ref="addr3"/>
+</bean>
+
+<bean id="addr1" class="com.spring.Address">
+<constructor-arg value="kaniyur"/>
+</bean>
+
+<bean id="addr2" class="com.spring.Address">
+<constructor-arg value="katpadi"/>
+</bean>
+
+<bean id="addr3" class="com.spring.Address">
+<constructor-arg value="hosur"/>
+</bean>
+</beans>
